@@ -22,21 +22,6 @@ Este é o backend da aplicação AMA (Ask Me Anything) desenvolvido com Golang +
    WSRS_DATABASE_HOST="localhost"
    ```
 
-## Como Rodar
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/leobritto95/semana-tech-go-react-server
-   ```
-2. Instale as dependências:
-   ```bash
-   go mod tidy
-   ```
-3. Execute a aplicação:
-   ```bash
-   go run main.go
-   ```
-
 ## Uso com Docker Compose (Opcional)
 
 Se preferir rodar o banco de dados com Docker Compose, siga estas etapas:
@@ -52,6 +37,27 @@ Se preferir rodar o banco de dados com Docker Compose, siga estas etapas:
 5. Para parar os containers:
    ```bash
    docker-compose down
+   ```
+
+## Como Rodar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/leobritto95/semana-tech-go-react-server
+   ```
+2. Instale as dependências:
+   ```bash
+   go mod tidy
+   ```
+3. Rode as migrations usando o [tern](https://github.com/jackc/tern)
+
+   ```bash
+   go run ./cmd/tools/terndotenv/main.go
+   ```
+
+4. Execute a aplicação:
+   ```bash
+   go run ./cmd/wsrs/main.go
    ```
 
 ## Deploy para Produção
